@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="style.css">> -->
+
+</head>
+<style>
+    body{
+    background-color:var(--primary-color);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 40px;
+    margin: 20px;
+    padding:10px;
+    font-weight: 300;
+    color:var(--secondary-color);
+    
+    
+}
+nav ul{
+    text-align: right;
+}
+ul{
+    float: right;
+    font-size: 20px;
+    display: flex;
+    flex: right;
+    gap: 30px;
+
+    
+}
+.section{
+    display: flex;
+    font-size: 120px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.even{
+    color: orangered;
+}
+.odd{
+    color:var(--secondary-color);
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+#theme{
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding:10px;
+}
+#theme:hover{
+    background-color: orangered;
+    
+}
+:root{
+    --primary-color: white;
+    --secondary-color:black;
+}
+.dark-theme{
+    --primary-color:black;
+    --secondary-color:white;
+
+    
+}
+@media(max-width:750px){
+    nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    margin: 5px;
+    padding:2px;
+    font-weight: 200;
+    color:var(--secondary-color);
+    
+    
+}
+ul{
+    float: right;
+    font-size: 5px;
+    display: flex;
+    flex: right;
+    gap: 5px;
+
+    
+}
+#theme{
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding:5px;
+    place-self: center;
+}
+.section{
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: -30px;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+}
+    
+   
+</style>
+<body>
+    <div class="main">
+        <nav>
+            <i class="bi bi-bus-front">Travels.com</i>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Contact us</li>
+                <li>login</li>
+            </ul>
+            <!-- <i class="bi bi-moon-fill"></i> -->
+        </nav>
+        
+    </div>
+    <div class="section">
+        <p class="odd">“Work,</p><p class="even">Travel,</p><p class="odd"> Save,</p><p class="even"> Repeat.”</p>
+    </div>
+    <div class="btn"><button id="theme">Change Theme</button></div>
+   
+
+</body>
+<script>
+    var button=document.getElementById("theme")
+    let icon=document.getElementsByClassName("icon")
+    button.addEventListener("click",()=>{
+        document.body.classList.toggle("dark-theme")
+        
+    })
+</script>
+</html>
